@@ -1,0 +1,23 @@
+{
+  "name": "intro-to-backend",
+  "version": "1.0.0",
+  "description": "learning backend",
+  "homepage": "https://github.com/rakeshakshat67/Backend#readme",
+  "bugs": {
+    "url": "https://github.com/rakeshakshat67/Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakeshakshat67/Backend.git"
+  },
+  "license": "ISC",
+  "author": "Akshat",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
