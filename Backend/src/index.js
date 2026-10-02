@@ -1,9 +1,12 @@
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
+import connectDB from "./config/database.js";
+import app from "./app.js";
+
 dotenv.config({
-    path: `./.env`
+    path: "./.env"
 });
 const startServer = async () => {
-    try{await connectDB;
+    try{await connectDB();
 
         app.on("error", (error) => {
             console.log("ERROR", error);
@@ -19,3 +22,30 @@ catch (error) {
 }
 }
 startServer();
+/*import dotenv from "dotenv";
+import connectDB from "./config/database.js";
+import app from "./app.js";
+
+dotenv.config({ path: "./.env" });
+
+const PORT = process.env.PORT || 8000;
+
+const startServer = async () => {
+    try {
+        await connectDB();
+
+        const server = app.listen(PORT, () => {
+            console.log(`Server is running on port: ${PORT}`);
+        });
+
+        server.on("error", (error) => {
+            console.log("SERVER ERROR", error);
+            process.exit(1);
+        });
+    } catch (error) {
+        console.log("Startup failed!", error);
+        process.exit(1);
+    }
+};
+
+startServer();*/
